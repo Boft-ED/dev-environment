@@ -1,0 +1,56 @@
+@use "sass:math";
+
+//fonts in base
+@import "base/_fonts";
+
+//utils
+@import "base/_mixins";
+@import "base/_variables";
+
+// Шрифт по умолчанию ==============================================================================================================================================================================================================================================================================
+$fontFamily: "Noto Sans", sans-serif;
+$fontSize: rem(18); // где 1(px) - размер шрифта по умолчанию из макета
+
+//base
+@import "base/null";
+
+body {
+    color: $mainColor;
+    font-size: $fontSize;
+    font-family: $fontFamily;
+    background: linear-gradient(112.52deg, #dce2e5 2.5%, #e0e2e2 64.66%);
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+@media (max-width: 1199px) {
+    .container {
+        max-width: 970px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+}
+@media (max-width: 767px) {
+    .container {
+        max-width: 570px;
+    }
+}
+@media (max-width: 576px) {
+    .container {
+        max-width: 350px;
+    }
+}
+@media (max-width: 414px) {
+    .container {
+        max-width: 320px;
+    }
+}
+
+//pages
+@import "pages/_home";
